@@ -284,6 +284,10 @@ ul {
 }
 
 @media (max-width: 768px) {
+  .custom-text{
+    color: black;
+  }
+
   .post-thumbnail {
     width: 40%;
   }
