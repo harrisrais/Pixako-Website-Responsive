@@ -286,6 +286,16 @@ ul {
   .fourth h6 {
     font-size: 1rem;
   }
+
+  body::-webkit-scrollbar {
+    display: none;
+  }
+  
+  /* Hide scrollbar for IE, Edge and Firefox */
+  body {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
 }
 
 @media (max-width: 576px) {
