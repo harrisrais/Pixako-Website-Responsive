@@ -158,8 +158,13 @@ ul {
 }
 
 .hero-content h1 {
+  color: rgb(255, 183, 183);
   font-weight: 700;
   font-size: 2rem;
+}
+
+.custom-text{
+  color: rgb(255, 183, 183);
 }
 
 .hero-button {
@@ -283,8 +288,14 @@ ul {
 }
 
 @media (max-width: 768px) {
+  .hero-content h1 {
+  color: rgb(255, 183, 183);
+  font-weight: 700;
+  font-size: 2rem;
+}
+
   .custom-text{
-    color: rgb(209, 209, 209);
+    color: rgb(255, 183, 183);
   }
 
   .post-thumbnail {
