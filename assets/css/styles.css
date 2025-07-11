@@ -2,6 +2,17 @@ body {
   font-family: 'Source Sans Pro', 'sans-serif';
 }
 
+/* Prevent horizontal overflow */
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* Make sure no element overflows on mobile */
+* {
+  box-sizing: border-box;
+}
+
 .main-background {
   background-image: url('../images/hero-bg.jpg');
   background-size: cover;
@@ -287,15 +298,15 @@ ul {
     font-size: 1rem;
   }
 
-  body::-webkit-scrollbar {
-    display: none;
-  }
-  
-  /* Hide scrollbar for IE, Edge and Firefox */
-  body {
-    -ms-overflow-style: none;  /* IE and Edge */
-    scrollbar-width: none;  /* Firefox */
-  }
+   html, body {
+  overflow: -moz-scrollbars-none;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
 }
 
 @media (max-width: 576px) {
