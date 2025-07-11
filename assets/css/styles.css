@@ -285,7 +285,7 @@ ul {
 
 @media (max-width: 768px) {
   .custom-text{
-    color: black;
+    color: rgb(209, 209, 209);
   }
 
   .post-thumbnail {
