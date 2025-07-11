@@ -16,7 +16,6 @@ body {
   background-image: url('../images/hero-bg.jpg');
   background-size: cover;
   background-position: center;
-  color: rgb(255, 183, 183);
   min-height: 100vh;
 }
 
