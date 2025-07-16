@@ -2,41 +2,56 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ZeroFour Navbar</title>
+    <meta name="description"
+        content="Pixako Technologies - Transforming ideas into reality where innovation meets code">
+
+    <!-- CSS Links -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <link rel="stylesheet" href="assets/css/styles.css" />
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,600,700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+
+    <!-- JS Links (deferred) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" defer></script>
 </head>
 
 <body>
     <div class="main">
-        <div class="main-background first">
+        <!-- Hero Section -->
+        <section class="main-background first">
             <div class="container pt-5">
                 <div class="row justify-content-center">
-                    <div class="nav-bg-overlay col-12 sticky-top">
+                    <header class="nav-bg-overlay col-12 sticky-top">
                         <nav class="navbar navbar-expand-lg custom-navbar-wrapper">
-                            <div class="container-fluid px-3">
-                                <a class="fs-3 navbar-brand me-5 text-white fw-bolder" href="#">PIXAKO</a>
-                                <button class="navbar-toggler text-white border-0 m-2" type="button"
-                                    data-bs-toggle="collapse" data-bs-target="#mainNavbar">
+                            <div class="container-fluid px-3 position-relative">
+                                <!-- Toggler on left for mobile -->
+                                <button class="navbar-toggler text-white border-0 m-2 order-lg-2 order-1" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#mainNavbar"
+                                    aria-label="Toggle navigation">
                                     <i class="fa fa-bars fa-lg"></i>
                                 </button>
-                                <div class="collapse navbar-collapse justify-content-between " id="mainNavbar">
-                                    <ul class=" navbar-nav ms-auto d-flex gap-3">
-                                        <li class="nav-item p-md-0 m-md-0 p-sm-0 m-sm-0 p-xs-0 m-xs-0">
-                                            <a class="nav-link active" href="index.html">Home</a>
-                                        </li>
 
-                                        <li
-                                            class="nav-item p-md-0 m-md-0 p-sm-0 m-sm-0 p-xs-0 m-xs-0 dropdown position-static">
-                                            <a class="nav-link dropdown-toggle" href="#" id="mainDropdown"
-                                                role="button">Services</a>
-                                            <ul class="dropdown-menu mt-2">
+                                <!-- Brand centered for mobile -->
+                                <a class="fs-3 navbar-brand text-white fw-bolder mx-auto order-lg-1 order-2 px-2"
+                                    href="#">PIXAKO</a>
+
+                                <!-- Empty div to balance flex layout on mobile -->
+                                <div class="order-lg-3 order-3 d-lg-none" style="width: 48px;"></div>
+
+                                <div class="collapse navbar-collapse justify-content-between order-lg-4 order-4"
+                                    id="mainNavbar">
+                                    <ul class="navbar-nav ms-auto d-flex gap-3">
+                                        <li class="nav-item">
+                                            <a class="nav-link p-md-2 p-sm-2 p-xs-2 active" href="index.html">Home</a>
+                                        </li>
+                                        <li class="nav-item dropdown position-static">
+                                            <a class="nav-link p-md-2 p-sm-2 p-xs-2 dropdown-toggle" href="#"
+                                                id="mainDropdown" role="button" aria-expanded="false">Services</a>
+                                            <ul class="dropdown-menu mt-2" aria-labelledby="mainDropdown">
                                                 <li><a class="dropdown-item" href="#">Software Development</a></li>
                                                 <li><a class="dropdown-item" href="#">IT Consultancy</a></li>
                                                 <li class="dropdown-submenu">
@@ -45,54 +60,53 @@
                                                     <ul class="dropdown-menu">
                                                         <li><a class="dropdown-item" href="#">AWS Cloud Services</a>
                                                         </li>
-                                                        <li><a class="dropdown-item" href="#">Cloud Migration</a>
-                                                        </li>
+                                                        <li><a class="dropdown-item" href="#">Cloud Migration</a></li>
                                                         <li><a class="dropdown-item" href="#">Managed Cloud</a></li>
-                                                        <li><a class="dropdown-item" href="#">Cloud Security</a>
-                                                        </li>
+                                                        <li><a class="dropdown-item" href="#">Cloud Security</a></li>
                                                     </ul>
                                                 </li>
                                                 <li><a class="dropdown-item" href="#">Cybersecurity</a></li>
                                             </ul>
                                         </li>
-
-                                        <li class="nav-item p-md-0 m-md-0 p-sm-0 m-sm-0 p-xs-0 m-xs-0">
-                                            <a class="nav-link" href="#left-sidebar-content">Left Sidebar</a>
+                                        <li class="nav-item">
+                                            <a class="nav-link p-md-2 p-sm-2 p-xs-2" href="#left-sidebar-content">Left
+                                                Sidebar</a>
                                         </li>
-                                        <li class="nav-item p-md-0 m-md-0 p-sm-0 m-sm-0 p-xs-0 m-xs-0">
-                                            <a class="nav-link" href="#right-sidebar-content">Right Sidebar</a>
+                                        <li class="nav-item">
+                                            <a class="nav-link p-md-2 p-sm-2 p-xs-2" href="#right-sidebar-content">Right
+                                                Sidebar</a>
                                         </li>
-                                        <li class="nav-item p-md-0 m-md-0 p-sm-0 m-sm-0 p-xs-0 m-xs-0">
-                                            <a class="nav-link" href="#no-sidebar-content">No Sidebar</a>
+                                        <li class="nav-item">
+                                            <a class="nav-link p-md-2 p-sm-2 p-xs-2" href="#no-sidebar-content">No
+                                                Sidebar</a>
                                         </li>
                                     </ul>
                                 </div>
                             </div>
                         </nav>
-
-                    </div>
+                    </header>
                 </div>
             </div>
 
             <div class="hero">
                 <div class="overlay">
-                    <hr class="container col-8" />
-                    <hr class="container col-8" />
+                    <hr class="container col-8">
+                    <hr class="container col-8">
                     <div class="container hero-content text-center py-4">
-                        <h1 class="custom-text">
-                            PIXAKO: TRANSFORMING IDEAS INTO REALITY<br />
+                        <h1>
+                            PIXAKO: TRANSFORMING IDEAS INTO REALITY <br>
                             WHERE INNOVATION MEETS CODE
                         </h1>
                     </div>
-                    <hr class="container col-lg-8 col-md-10 col-sm-11" />
-                    <hr class="container col-lg-8 col-md-10 col-sm-11" />
+                    <hr class="container col-lg-8 col-md-10 col-sm-11">
+                    <hr class="container col-lg-8 col-md-10 col-sm-11">
                 </div>
 
                 <div class="container py-5">
                     <div class="row justify-content-center">
                         <div
                             class="col-md-10 d-flex flex-column flex-md-row justify-content-center align-items-center text-center gap-3">
-                            <p class="fs-5 fw-bold mb-0 text-end custom-text">
+                            <p class="fs-6 fw-bolder mb-0 text-end text-sm-center text-md-end">
                                 DOES THIS STATEMENT MAKE YOU WANT TO <br> CLICK THE BIG SHINY BUTTON?
                             </p>
                             <a href="#" class="btn btn-primary custom-btn-blue yes-btn">
@@ -102,81 +116,85 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
 
-        <div id="pixako-technologies-section" class="second">
+        <!-- Technologies Section -->
+        <section id="pixako-technologies-section" class="second">
             <div class="important-heading container col-12">
-                <div class="text-center important-heading">
+                <header class="text-center important-heading">
                     <div class="content">
                         <h2 class="custom-gray-heading fw-bolder">PIXAKO TECHNOLOGIES</h2>
-                        <h4 class="custom-gray-heading fw-bold"> <span class="custom-gray-span fw-bold">WE PROVIDE
-                                SOFTWARE
-                                PRODUCTS AND SERVICES,</span> IT SERVICES...</h4>
+                        <h4 class="custom-gray-heading fw-bold">
+                            <span class="custom-gray-span fw-bold">WE PROVIDE SOFTWARE PRODUCTS AND SERVICES,</span> IT
+                            SERVICES...
+                        </h4>
                     </div>
-                    <hr class="custom-hr">
-                    <hr class="custom-hr">
-                </div>
+                    <hr class="container col-lg-12 col-md-10 col-sm-11 mb-2">
+                    <hr class="container col-lg-12 col-md-10 col-sm-11 m-0">
+                </header>
             </div>
+
             <div class="container py-5 col-md-12">
                 <div class="row g-5 text-center">
-                    <div class="col-12 col-md-12 col-lg-4">
+                    <article class="col-12 col-md-12 col-lg-4">
                         <div class="feature-box">
                             <img src="assets/images/download.jpg" class="img-fluid rounded mb-4" alt="Camera-Man">
                             <div class="d-flex align-items-center justify-content-center gap-3">
-                                <i class="bi bi-person fs-1 text-muted"></i>
+                                <i class="bi bi-person fs-1 text-muted" aria-hidden="true"></i>
                                 <div class="text-start">
-                                    <h5 class="fw-bold text-uppercase mb-1">OFFICE</h5>
+                                    <h3 class="fw-bold text-uppercase mb-1">OFFICE</h3>
                                     <p class="text-muted text-uppercase small mb-0 fw-bold">Work from Home</p>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-12 col-md-12 col-lg-4">
+                    </article>
+
+                    <article class="col-12 col-md-12 col-lg-4">
                         <div class="feature-box">
                             <img src="assets/images/water-drops.jpg" class="img-fluid rounded mb-4" alt="Water Drops">
                             <div class="d-flex align-items-center justify-content-center gap-3">
-                                <i class="bi bi-gear-fill fs-1 text-muted"></i>
+                                <i class="bi bi-gear-fill fs-1 text-muted" aria-hidden="true"></i>
                                 <div class="text-start">
-                                    <h5 class="fw-bold text-uppercase mb-1">CONTRACT</h5>
+                                    <h3 class="fw-bold text-uppercase mb-1">CONTRACT</h3>
                                     <p class="text-muted text-uppercase small mb-0 fw-bold">Quick and easy Contracts</p>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-12 col-md-12 col-lg-4">
+                    </article>
+
+                    <article class="col-12 col-md-12 col-lg-4">
                         <div class="feature-box">
                             <img src="assets/images/cup.jpg" class="img-fluid rounded mb-4" alt="Cup">
                             <div class="d-flex align-items-center justify-content-center gap-3">
-                                <i class="bi bi-bar-chart-line-fill fs-1 text-muted"></i>
+                                <i class="bi bi-bar-chart-line-fill fs-1 text-muted" aria-hidden="true"></i>
                                 <div class="text-start">
-                                    <h5 class="fw-bold text-uppercase mb-1">INSURANCE</h5>
+                                    <h3 class="fw-bold text-uppercase mb-1">INSURANCE</h3>
                                     <p class="text-muted text-uppercase small mb-0 fw-bold">We Value You</p>
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </article>
                 </div>
-                <div class="pixako-para">
-                    <div class="col text-center pixako-para">
+
+                <div class="container pixako-para">
+                    <div class="text-center pixako-para">
                         <p>
                             Pixako Technologies (Pvt.) Ltd is a Private Limited IT Company and a registered AWS Partner
-                            in
-                            Pakistan. The company, registered under the banner of SECP, is progressively finding new
-                            ways to
-                            attain the highest level of professionalism, commitment and diversification in the
-                            respective
-                            field
+                            in Pakistan. The company, registered under the banner of SECP, is progressively finding new
+                            ways to attain the highest level of professionalism, commitment and diversification in the
+                            respective field.
                         </p>
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
 
-        <div id="left-sidebar-content" class="container py-5 third" style="display: none;">
+        <!-- Left Sidebar Section -->
+        <section id="left-sidebar-content" class="container py-5 third" style="display: none;">
             <div class="row left-sidebar">
-                <div class="custom-left col-lg-4 col-md-12 col-sm-12 col-xs-12">
+                <aside class="custom-left col-lg-4 col-md-12 col-sm-12 col-xs-12">
                     <div class="sidebar-box mb-4">
-                        <h5 class="text-uppercase fw-bold mb-3">About Pixako</h5>
+                        <h2 class="text-uppercase fw-bold mb-3">About Pixako</h2>
                         <p>Pixako Technologies is a leading IT company focused on delivering innovative software
                             products and services. We are committed to excellence, providing tailored solutions that
                             address complex business challenges and drive digital transformation for our clients
@@ -184,32 +202,33 @@
                         <a href="#" class="btn btn-primary custom-btn-blue mt-3">Find Out More</a>
                     </div>
                     <div class="sidebar-box">
-                        <h5 class="text-uppercase fw-bold mb-3">Our Offerings</h5>
+                        <h2 class="text-uppercase fw-bold mb-3">Our Offerings</h2>
                         <ul class="list-unstyled">
-                            <li><a href="#" class="text-decoration-none text-dark d-block py-1 fw-normal ">Software
+                            <li><a href="#" class="text-decoration-none text-dark d-block py-1 fw-normal">Software
                                     Development</a></li>
-                            <li><a href="#" class="text-decoration-none text-dark d-block py-1 fw-normal ">IT
+                            <li><a href="#" class="text-decoration-none text-dark d-block py-1 fw-normal">IT
                                     Consultancy</a></li>
-                            <li><a href="#" class="text-decoration-none text-dark d-block py-1 fw-normal ">Cloud
+                            <li><a href="#" class="text-decoration-none text-dark d-block py-1 fw-normal">Cloud
                                     Solutions (AWS Partner)</a></li>
-                            <li><a href="#" class="text-decoration-none text-dark d-block py-1 fw-normal ">Cybersecurity
+                            <li><a href="#" class="text-decoration-none text-dark d-block py-1 fw-normal">Cybersecurity
                                     Services</a></li>
-                            <li><a href="#" class="text-decoration-none text-dark d-block py-1 fw-normal ">Data
+                            <li><a href="#" class="text-decoration-none text-dark d-block py-1 fw-normal">Data
                                     Analytics</a></li>
-                            <li><a href="#" class="text-decoration-none text-dark d-block py-1 fw-normal ">Mobile App
+                            <li><a href="#" class="text-decoration-none text-dark d-block py-1 fw-normal">Mobile App
                                     Development</a></li>
-                            <li><a href="#" class="text-decoration-none text-dark d-block py-1 fw-normal ">Web Design
-                                    And Development</a></li>
-                            <li><a href="#" class="text-decoration-none text-dark d-block py-1 fw-normal ">DevOps &
+                            <li><a href="#" class="text-decoration-none text-dark d-block py-1 fw-normal">Web Design And
+                                    Development</a></li>
+                            <li><a href="#" class="text-decoration-none text-dark d-block py-1 fw-normal">DevOps &
                                     Automation</a></li>
-                            <li><a href="#" class="text-decoration-none text-dark d-block py-1 fw-normal ">Digital
+                            <li><a href="#" class="text-decoration-none text-dark d-block py-1 fw-normal">Digital
                                     Marketing</a></li>
                         </ul>
                         <a href="#" class="btn btn-primary custom-btn-blue mt-3">View All Services</a>
                     </div>
-                </div>
+                </aside>
+
                 <div class="col-lg-8 col-md-12 col-sm-12 col-xs-12 custom-right">
-                    <h2 class="fw-bold text-uppercase mb-3">Left Sidebar Content: In-Depth</h2>
+                    <h1 class="fw-bold text-uppercase mb-3">Left Sidebar Content: In-Depth</h1>
                     <p class="text-uppercase text-muted fw-bold small mb-4">A Closer Look At Our Core Competencies</p>
                     <img src="assets/images/bar.jpg" class="img-fluid rounded mb-4" alt="Left Sidebar Image">
                     <p>At Pixako Technologies, we specialize in transforming complex business challenges into innovative
@@ -217,7 +236,7 @@
                         ensuring every project delivers tangible value and fosters sustainable growth for your
                         enterprise. We pride ourselves on a client-centric methodology, adapting to your unique needs to
                         achieve outstanding results.</p>
-                    <h4 class="fw-bold text-uppercase mt-5 mb-3">More Intriguing Information: Our Process</h4>
+                    <h2 class="fw-bold text-uppercase mt-5 mb-3">More Intriguing Information: Our Process</h2>
                     <p>Our development process begins with a thorough discovery phase to understand your vision and
                         requirements. This is followed by agile development cycles, where we emphasize continuous
                         collaboration, feedback, and iterative improvements. Quality assurance is integrated at every
@@ -231,12 +250,13 @@
                         based on trust, transparency, and shared success.</p>
                 </div>
             </div>
-        </div>
+        </section>
 
-        <div id="right-sidebar-content" class="container py-5 third" style="display: none;">
+        <!-- Right Sidebar Section -->
+        <section id="right-sidebar-content" class="container py-5 third" style="display: none;">
             <div class="row">
                 <div class="col-lg-8 col-md-12 col-sm-12 col-xs-12">
-                    <h2 class="fw-bold text-uppercase mb-3">Right Sidebar Content: Key Information</h2>
+                    <h1 class="fw-bold text-uppercase mb-3">Right Sidebar Content: Key Information</h1>
                     <p class="text-uppercase text-muted fw-bold small mb-4">Essential Insights From Pixako Technologies
                     </p>
                     <img src="assets/images/bar.jpg" class="img-fluid rounded mb-4" alt="Right Sidebar Image">
@@ -244,7 +264,7 @@
                         We believe in fostering a deep understanding of industry trends and client needs, ensuring that
                         our services consistently drive value. Our expertise spans various domains, allowing us to offer
                         holistic and integrated IT solutions tailored to the modern business landscape.</p>
-                    <h4 class="fw-bold text-uppercase mt-5 mb-3">More Intriguing Information: Our Vision</h4>
+                    <h2 class="fw-bold text-uppercase mt-5 mb-3">More Intriguing Information: Our Vision</h2>
                     <p>Our vision is to be a transformative force in the technology sector, empowering businesses
                         through cutting-edge innovation and unparalleled service. We strive to create intelligent,
                         scalable, and secure digital infrastructures that not only meet current demands but also
@@ -256,16 +276,17 @@
                         providing our clients with the most advanced and effective solutions available. Partner with us
                         to navigate your digital journey with confidence.</p>
                 </div>
-                <div class="col-lg-4 col-md-12 col-sm-12 col-xs-12">
+
+                <aside class="col-lg-4 col-md-12 col-sm-12 col-xs-12">
                     <div class="sidebar-box mb-4">
-                        <h5 class="text-uppercase fw-bold mb-3">Our Core Values</h5>
+                        <h2 class="text-uppercase fw-bold mb-3">Our Core Values</h2>
                         <p>We are driven by integrity, innovation, and client success. Our team upholds the highest
                             standards of professionalism and collaboration, ensuring transparent communication and
                             ethical practices in every project we undertake.</p>
                         <a href="#" class="btn btn-primary custom-btn-blue mt-3">Learn About Our Values</a>
                     </div>
                     <div class="sidebar-box">
-                        <h5 class="text-uppercase fw-bold mb-3">Quick Links & Resources</h5>
+                        <h2 class="text-uppercase fw-bold mb-3">Quick Links & Resources</h2>
                         <ul class="list-unstyled">
                             <li><a href="#" class="text-decoration-none text-dark d-block py-1 fw-normal">Client
                                     Testimonials</a></li>
@@ -286,14 +307,14 @@
                         </ul>
                         <a href="#" class="btn btn-primary custom-btn-blue mt-3">Get In Touch</a>
                     </div>
-                </div>
+                </aside>
             </div>
-        </div>
+        </section>
 
         <!-- No Sidebar Section -->
-        <div id="no-sidebar-content" class="container py-5 third" style="display: none;">
-            <div class="text-start">
-                <h2 class="fw-bold text-uppercase mb-3">NO SIDEBAR</h2>
+        <section id="no-sidebar-content" class="container py-5 third" style="display: none;">
+            <article class="text-start">
+                <h1 class="fw-bold text-uppercase mb-3">NO SIDEBAR</h1>
                 <p class="text-uppercase text-muted fw-bold small mb-4">Simplicity and Clean Design</p>
                 <img src="assets/images/bar.jpg" class="img-fluid rounded mb-4" alt="No Sidebar Image">
                 <p>
@@ -305,7 +326,7 @@
                     eu
                     accumsan id.
                 </p>
-                <h4 class="fw-bold text-uppercase mt-5 mb-3">More Intriguing Information</h4>
+                <h2 class="fw-bold text-uppercase mt-5 mb-3">More Intriguing Information</h2>
                 <p>
                     Lorem ipsum dolor sit amet consectetur adipiscing elit. Maecenas eu quam ut dolor laoreet
                     scelerisque. Quisque
@@ -321,114 +342,115 @@
                     convallis lorem vel, tincidunt velit. Fusce ut suscipit arcu. Etiam at diam ut sapien tincidunt
                     tincidunt.
                 </p>
-            </div>
-        </div>
+            </article>
+        </section>
 
-
-        <div class="container py-5 third" id="third-section">
+        <!-- Innovation Section -->
+        <section class="container py-5 third" id="third-section">
             <div class="row text-center">
-                <div class="col-lg-6 mb-4">
+                <article class="col-lg-6 mb-4">
                     <h2 class="fw-bold text-uppercase">INNOVATION</h2>
                     <p class="text-uppercase text-muted fw-bold small">PUSHING BOUNDARIES FORWARD <em>*THAT*</em>
                         MATTERS</p>
-                    <hr class="my-2 mx-auto" style="width: 85%;">
-                    <hr class="my-2 mx-auto" style="width: 85%;">
+                    <div class="pt-4 pb-5">
+                        <hr class="my-2 mx-auto" style="width: 85%;">
+                        <hr class="my-2 mx-auto" style="width: 85%;">
+                    </div>
                     <p class="px-lg-5 pixako">
                         We constantly explore cutting-edge technologies and methodologies to deliver solutions that are
-                        not just current
-                        but future-proof. Our dedicated team thrives on creativity and problem-solving,
+                        not just current but future-proof. Our dedicated team thrives on creativity and problem-solving,
                         ensuring our services remain at the forefront of industry advancements.
                     </p>
-                    <a href="#" class="btn btn-primary custom-btn-blue lets-btn mt-3 fs-5">
-                        <i class="fa fa-arrow-circle-o-right me-2 "></i>EXPLORE OUR R&D
+                    <a href="#" class="btn btn-primary custom-btn-blue lets-btn fs-5">
+                        <i class="fa fa-arrow-circle-o-right me-2"></i>EXPLORE OUR R&D
                     </a>
-                </div>
-                <div class="col-lg-6 mb-4">
+                </article>
+
+                <article class="col-lg-6 mb-4">
                     <h2 class="fw-bold text-uppercase">GLOBAL REACH</h2>
                     <p class="text-uppercase text-muted fw-bold small">CONNECTING BUSINESSES WORLDWIDE</p>
-                    <hr class="my-2 mx-auto" style="width: 85%;">
-                    <hr class="my-2 mx-auto" style="width: 85%;">
+                    <div class="pt-4 pb-5">
+                        <hr class="my-2 mx-auto" style="width: 85%;">
+                        <hr class="my-2 mx-auto" style="width: 85%;">
+                    </div>
                     <p class="px-lg-5 pixako">
-                        Pixako Technologies serves a diverse clientele, extending our expertise and services across
-                        geographical borders.
-                        Our robust infrastructure and agile teams enable seamless project execution, no matter where
-                        your business is located.
+                        We constantly explore cutting-edge technologies and methodologies to deliver solutions that are
+                        not just current but future-proof. Our dedicated team thrives on creativity and problem-solving,
+                        ensuring our services remain at the forefront of industry advancements.
                     </p>
-                    <a href="#address" class="btn custom-btn-dark what-btn mt-3 fs-5">
+                    <a href="#address" class="btn custom-btn-dark what-btn fs-5">
                         <i class="bi bi-info-circle-fill me-2"></i>OUR LOCATIONS
                     </a>
-                </div>
+                </article>
             </div>
-        </div>
-        <div class="fourth">
+        </section>
+
+        <!-- Blog Section -->
+        <section class="fourth">
             <div class="container py-5">
                 <div class="row gy-4 gx-5 align-items-stretch">
                     <div class="col-lg-8 d-flex flex-column">
-                        <h5 class="text-uppercase fw-bold mb-5 fs-3">
+                        <h2 class="text-uppercase fw-bold mb-5 fs-3">
                             <i class="bi bi-file-earmark-text me-2 post-icon"></i>Recent Posts
-                        </h5>
+                        </h2>
 
-                        <div class="d-flex flex-column flex-md-row border-bottom pb-4 mb-4 gap-3 align-items-start">
-                            <img src="assets/images/post-1.jpg" class="img-fluid rounded post-thumbnail" alt="Post 1" />
+                        <article class="d-flex flex-column flex-md-row border-bottom pb-4 mb-4 gap-3 align-items-start">
+                            <img src="assets/images/post-1.jpg" class="img-fluid rounded post-thumbnail" alt="Post 1">
                             <div>
                                 <p class="text-uppercase text-muted mb-1 fw-bold small">JULY 24</p>
-                                <h6 class="fw-bold text-uppercase fs-6 mb-2">Repairing a Hyperspace Window</h6>
+                                <h3 class="fw-bold text-uppercase fs-6 mb-2">Repairing a Hyperspace Window</h3>
                                 <p class="mb-0">
                                     Phasellus quam turpis, feugiat sit amet ornare in, hendrerit in lectus semper mod
                                     quis turpis nisi consequat etiam lorem.
                                 </p>
                             </div>
-                        </div>
+                        </article>
 
-                        <div class="d-flex flex-column flex-md-row border-bottom pb-4 mb-4 gap-3 align-items-start">
-                            <img src="assets/images/post-2.jpg" class="img-fluid rounded post-thumbnail" alt="Post 2" />
+                        <article class="d-flex flex-column flex-md-row border-bottom pb-4 mb-4 gap-3 align-items-start">
+                            <img src="assets/images/post-2.jpg" class="img-fluid rounded post-thumbnail" alt="Post 2">
                             <div>
                                 <p class="text-uppercase text-muted mb-1 fw-bold small">JULY 18</p>
-                                <h6 class="fw-bold text-uppercase fs-6 mb-2">Adventuring with a Knee Injury</h6>
+                                <h3 class="fw-bold text-uppercase fs-6 mb-2">Adventuring with a Knee Injury</h3>
                                 <p class="mb-0">
                                     Phasellus quam turpis, feugiat sit amet ornare in, hendrerit in lectus semper mod
                                     quis turpis nisi consequat etiam lorem.
                                 </p>
                             </div>
-                        </div>
+                        </article>
 
-                        <div class="d-flex flex-column flex-md-row pb-4 mb-4 gap-3 align-items-start">
-                            <img src="assets/images/post-3.jpg" class="img-fluid rounded post-thumbnail" alt="Post 3" />
+                        <article class="d-flex flex-column flex-md-row pb-4 mb-4 gap-3 align-items-start">
+                            <img src="assets/images/post-3.jpg" class="img-fluid rounded post-thumbnail" alt="Post 3">
                             <div>
                                 <p class="text-uppercase text-muted mb-1 fw-bold small">JULY 14</p>
-                                <h6 class="fw-bold text-uppercase fs-6 mb-2">Preparing for Y2K38</h6>
+                                <h3 class="fw-bold text-uppercase fs-6 mb-2">Preparing for Y2K38</h3>
                                 <p class="mb-0">
                                     Phasellus quam turpis, feugiat sit amet ornare in, hendrerit in lectus semper mod
                                     quis eget mi dolore.
                                 </p>
                             </div>
-                        </div>
+                        </article>
                     </div>
 
                     <!-- Spotlight -->
-                    <div class="col-lg-4 d-flex flex-column">
-                        <h5 class="text-uppercase fw-bold mb-5 fs-3">
+                    <aside class="col-lg-4 d-flex flex-column">
+                        <h2 class="text-uppercase fw-bold mb-5 fs-3">
                             <i class="bi bi-lightbulb me-2 spotlight-icon"></i>Spotlight
-                        </h5>
+                        </h2>
 
-                        <img src="assets/images/spotlight.jpg" class="img-fluid rounded w-100 mb-3" alt="Spotlight" />
-                        <h6 class="fw-bold text-uppercase">Neural Implants</h6>
+                        <img src="assets/images/spotlight.jpg" class="img-fluid rounded w-100 mb-3" alt="Spotlight">
+                        <h3 class="fw-bold text-uppercase">Neural Implants</h3>
                         <p class="small text-uppercase text-muted mb-3">The Pros and Cons. Mostly Cons.</p>
 
                         <p class="pb-2">
                             The integration of artificial intelligence into software development is
-                            revolutionizing
-                            how
-                            applications are built and deployed. From automated testing to intelligent code
-                            generation, paving the way for more
-                            sophisticated and
-                            robust solutions in the tech landscape.
-
+                            revolutionizing how applications are built and deployed. From automated testing to
+                            intelligent code
+                            generation, paving the way for more sophisticated and robust solutions in the tech
+                            landscape.
                         </p>
                         <p class="pb-4">
                             AI tools are enhancing efficiency and capabilities, paving the way for more
-                            sophisticated and
-                            robust solutions in the tech landscape.
+                            sophisticated and robust solutions in the tech landscape.
                         </p>
 
                         <div class="mt-auto">
@@ -436,11 +458,12 @@
                                 <i class="bi bi-file-earmark-text me-2 reading-icon"></i> Continue Reading
                             </a>
                         </div>
-                    </div>
+                    </aside>
                 </div>
             </div>
-        </div>
+        </section>
 
+        <!-- Footer -->
         <footer class="custom-footer p-5">
             <div class="footer-container">
                 <div class="footer-column">
@@ -458,7 +481,6 @@
                             <li><a href="#">Service Level Agreement (SLA)</a></li>
                             <li><a href="#">Career Opportunities</a></li>
                             <li><a href="#">Get A Quote</a></li>
-                        </ul>
                         </ul>
                     </div>
                 </div>
@@ -481,6 +503,7 @@
                             <li><a href="#">Testimonials</a></li>
                             <li><a href="#">Our Methodology</a></li>
                             <li><a href="#">Sustainability Initiatives</a></li>
+                        </ul>
                     </div>
                 </div>
 
@@ -503,29 +526,29 @@
                         <h3>GET IN TOUCH</h3>
                         <div class="contact-grid">
                             <div>
-                                <strong>TWITTER</strong><br />
+                                <strong>TWITTER</strong><br>
                                 <a href="#">@untitled-corp</a>
                             </div>
                             <div id="address">
-                                <strong>ADDRESS</strong><br />
-                                1234 Fictional Rd<br />
-                                Nashville, TN 00000-0000<br />
+                                <strong>ADDRESS</strong><br>
+                                1234 Fictional Rd<br>
+                                Nashville, TN 00000-0000<br>
                                 USA
                             </div>
                             <div>
-                                <strong>FACEBOOK</strong><br />
+                                <strong>FACEBOOK</strong><br>
                                 <a href="#">facebook.com/untitled</a>
                             </div>
                             <div>
-                                <strong>PHONE</strong><br />
+                                <strong>PHONE</strong><br>
                                 (000) 000-0000
                             </div>
                             <div>
-                                <strong>WWW</strong><br />
+                                <strong>WWW</strong><br>
                                 <a href="#">untitled.tld</a>
                             </div>
                             <div>
-                                <strong>EMAIL</strong><br />
+                                <strong>EMAIL</strong><br>
                                 <a href="#">user@untitled.tld</a>
                             </div>
                         </div>
@@ -539,18 +562,17 @@
                 <span>Design: <a href="#">HTML5 UP</a></span>
                 <span>Demo Images: <a href="#">Unsplash</a></span>
             </div>
-
         </footer>
-
     </div>
 
+    <!-- Go to Top Button -->
     <div class="invisible">
-        <button id="goTopBtn" class="go-top-btn d-none">
+        <button id="goTopBtn" class="go-top-btn d-none" aria-label="Go to top">
             <i class="bi bi-arrow-up"></i>
         </button>
     </div>
 
-    <script src="js/main.js"></script>
+    <script src="assets\js\main.js"></script>
 </body>
 
 </html>

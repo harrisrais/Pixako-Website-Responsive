@@ -1,5 +1,5 @@
 body {
-  font-family: 'Source Sans Pro', 'sans-serif';
+  font-family: 'Open Sans', sans-serif;
 }
 
 html,
@@ -8,7 +8,7 @@ body {
   overflow-x: hidden;
 }
 
-* {
+*{
   box-sizing: border-box;
 }
 
@@ -55,7 +55,7 @@ body {
 
 }
 
-.nav-bg-overlay.scrolled nav {
+.nav-bg-overlay.scrolled nav{
   border-radius: 0;
 }
 
@@ -78,6 +78,7 @@ body {
 @media (min-width: 992px) {
   .navbar-toggler {
     display: none;
+    left: 0%;
   }
 }
 
@@ -86,7 +87,6 @@ body {
   position: absolute;
   background: linear-gradient(to bottom, #3f3f3f 0%, #202020 100%);
   border-radius: 8px;
-
   z-index: 1050;
   top: 60%;
   min-width: 220px;
@@ -117,10 +117,9 @@ body {
 
 .dropdown-item {
   background: transparent;
-  color: rgb(131, 108, 108);
+  color: rgb(196, 174, 174);
   text-transform: uppercase;
   font-weight: bold;
-
 }
 
 .dropdown-item:hover {
@@ -138,15 +137,18 @@ body {
   width: 60%;
 }
 
+.navbar-brand{
+  letter-spacing: 0.9px;
+}
 
 .nav-link,
 ul {
   color: rgb(252, 219, 219) !important;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.9px;
   border-radius: 0.5rem;
-  transition: background 0.3s ease;
+  transition: background 0.5s ease;
 }
 
 .overlay {
@@ -158,14 +160,12 @@ ul {
   background-color: rgba(255, 255, 255, 0.1);
 }
 
+
+
 .hero-content h1 {
-  color: rgb(255, 183, 183);
   font-weight: 700;
   font-size: 2rem;
-}
-
-.custom-text {
-  color: rgb(255, 183, 183);
+  letter-spacing: 1px;
 }
 
 .hero-button {
@@ -176,12 +176,13 @@ ul {
 .navbar-nav {
   font-size: 14px;
   font-weight: bolder;
+  gap: 10px;
 }
 
 .custom-hr {
   width: 100%;
   margin: 8px auto;
-  opacity: 20%;
+  opacity: 70%;
   border: none;
   height: 1px;
 }
@@ -289,38 +290,36 @@ ul {
 }
 
 @media (max-width: 768px) {
-  .hero-content h1 {
-    color: rgb(235, 235, 235);
-    font-weight: 700;
-    font-size: 2rem;
+  .hero h1{
+    text-align: center !important;
   }
 
-  .custom-text {
-    color: rgb(235, 235, 235);
+  .shiny-text {
+    text-align: center !important;
+  }
 
-    .post-thumbnail {
-      width: 40%;
-    }
+  .post-thumbnail {
+    width: 40%;
+  }
 
-    .continue-btn {
-      text-align: center;
-      font-size: 0.9rem;
-    }
+  .continue-btn {
+    text-align: center;
+    font-size: 0.9rem;
+  }
 
-    .fourth h6 {
-      font-size: 1rem;
-    }
+  .fourth h6 {
+    font-size: 1rem;
+  }
 
-    html,
-    body {
-      overflow: -moz-scrollbars-none;
-      -ms-overflow-style: none;
-      scrollbar-width: none;
-    }
+  html,
+  body {
+    overflow: -moz-scrollbars-none;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
 
-    body::-webkit-scrollbar {
-      display: none;
-    }
+  body::-webkit-scrollbar {
+    display: none;
   }
 
   .go-top-btn {
@@ -335,6 +334,7 @@ ul {
   }
 }
 
+
 .fourth {
   background: radial-gradient(ellipse at top, #f8f8f8, #e8e8e8);
   box-shadow: inset 0 20px 40px rgba(0, 0, 0, 0.1),
@@ -342,6 +342,8 @@ ul {
   padding-top: 4rem;
   padding-bottom: 4rem;
 }
+
+
 
 .custom-footer {
   background: linear-gradient(to bottom, #2d2e31 0%, #1b1d20 100%);
@@ -457,6 +459,28 @@ ul {
 }
 
 @media (max-width: 991px) {
+
+    .navbar-toggler {
+        position: relative;
+        z-index: 1;
+    }
+    
+    .navbar-collapse {
+        margin-top: 10px;
+    }
+    
+    /* Remove the custom padding/margin classes from nav-items */
+    .nav-item {
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+
+
+  .hero p{
+    text-align: center;
+    display: block;
+  }
+
   .dropdown-submenu>.dropdown-menu {
     top: 0;
     left: 102%;
@@ -608,7 +632,6 @@ ul {
 
 }
 
-
 @media (max-width: 737px) {
   .continue-btn {
     background-color: #3b3b3b;
@@ -622,11 +645,6 @@ ul {
     transition: background-color 0.3s ease;
   }
 
-
-  .navbar-nav {
-    gap: 10px;
-
-  }
 
   .hero p {
     text-align: center !important;
